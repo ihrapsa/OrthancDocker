@@ -1,4 +1,4 @@
- name: Docker Image Build and Push
+ name: Orthanc 1.12.0 Docker Image Build and Push
  on:
    workflow_dispatch:
  jobs:
