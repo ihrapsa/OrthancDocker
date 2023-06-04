@@ -1,7 +1,7 @@
  name: Orthanc Core Docker Image Build and Push
  on:
    push:
-     branches: [ 1.12.0 ] 
+     branches: [ master ] 
    workflow_dispatch:
  jobs:
    docker:
@@ -10,7 +10,7 @@
        - name: Checkout repository
          uses: actions/checkout@v3
          with:
-           ref: 1.12.0
+           ref: master
        - name: Set up QEMU
          uses: docker/setup-qemu-action@v2
          with:
@@ -29,4 +29,4 @@
            file: ./orthanc/Dockerfile
            platforms: linux/arm64
            push: true
-           tags: jonah1024/orthanc:1.12.0
+           tags: jonah1024/orthanc:mainline

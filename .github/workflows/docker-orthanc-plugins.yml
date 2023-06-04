@@ -8,7 +8,7 @@
        - name: Checkout repository
          uses: actions/checkout@v3
          with:
-           ref: 1.12.0
+           ref: master
        - name: Set up QEMU
          uses: docker/setup-qemu-action@v2
          with:
@@ -27,4 +27,4 @@
            file: ./orthanc-plugins/Dockerfile
            platforms: linux/arm64
            push: true
-           tags: jonah1024/orthanc-plugins:1.12.0
+           tags: jonah1024/orthanc-plugins:mainline
